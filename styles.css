@@ -1,0 +1,517 @@
+* {
+  margin: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+nav img {
+  width: 100px;
+}
+nav .nav-links {
+  flex: 1;
+  text-align: right;
+}
+nav .nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+nav .nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #D30909;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+nav .nav-links ul li:hover::after {
+  width: 100%;
+}
+nav .nav-links ul a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+nav .nav-links ul a:hover {
+  color: #D30909;
+}
+nav .nav-links #navbar-button {
+  text-decoration: none;
+  padding: 12px 34px;
+  font-size: 7px;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  background: #D30909;
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 37px;
+  cursor: pointer;
+}
+
+.home-section {
+  padding: 150px;
+  justify-content: center;
+}
+.home-section .home {
+  display: flex;
+  overflow: hidden;
+  grid-template-columns: fit-content(300px) fit-content(1000px);
+  justify-content: center;
+}
+.home-section .home-logo {
+  width: 25vw;
+}
+.home-section .home-text {
+  display: grid;
+}
+.home-section #home-title {
+  color: #000;
+  font-family: "EB Garamond";
+  font-size: 85px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -6.8px;
+}
+.home-section #home-subtitle-1 {
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 57px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px; /* 140.351% */
+}
+.home-section #home-subtitle-2 {
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  padding-bottom: 30px;
+}
+
+#estimate-button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 34px;
+  font-size: 13px;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  background: #D30909;
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 37px;
+  cursor: pointer;
+}
+
+.about-section {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-image: url("/assets/kitchen_1.jpg");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.about-section .about {
+  display: flex;
+}
+.about-section .about .about-text {
+  flex-shrink: 0;
+  margin-left: 200px;
+  width: 500px;
+  display: grid;
+  justify-content: center;
+}
+.about-section .about .about-header {
+  color: #D30909;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 20px;
+}
+.about-section .about #about-subtitle {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.about-section .about #about-desc {
+  color: #000;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+}
+.about-section .about #about-button {
+  color: #FFF;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37px;
+  border: none;
+  background: #D30909;
+  border-radius: 4px;
+  padding: 5px;
+}
+.about-section .about ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.about-section .about li {
+  background: url("/assets/yellow-check.svg") no-repeat left center;
+  background-size: 16px 16px;
+}
+
+.services-section {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.services-section .services {
+  display: grid;
+  justify-content: center;
+}
+.services-section .services .services-header {
+  color: #D30909;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 20px;
+}
+.services-section .services .services-subtitle {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 50px;
+}
+.services-section .services .services-cards {
+  padding-bottom: 50px;
+}
+.services-section .services .services-button {
+  color: #FFF;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37px;
+  border: none;
+  background: #D30909;
+  border-radius: 4px;
+  padding: 20px 20px 20px;
+}
+
+.gallery-section {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.gallery-section .gallery {
+  display: grid;
+  grid-template-rows: fit-content(300px) fit-content(1000px);
+  justify-content: center;
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  justify-content: center;
+  background-image: url("/assets/slanted-rectangle.svg");
+  background-size: cover;
+  width: 100vw; /* Full viewport width */
+  height: 200vh; /* Full viewport height */
+}
+.gallery-section .gallery .gallery-header {
+  color: #D30909;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 20px;
+}
+.gallery-section .gallery .gallery-subtitle {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 50px;
+}
+.gallery-section .gallery .gallery-images {
+  padding-bottom: 50px;
+}
+.gallery-section .gallery .gallery-images img {
+  margin: 20px;
+  border-radius: 20px;
+}
+.gallery-section .gallery .gallery-button {
+  color: #FFF;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37px;
+  border: none;
+  background: #D30909;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.testimonials-section {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.testimonials-section .testimonials {
+  justify-content: center;
+  text-align: center;
+  display: grid;
+}
+.testimonials-section .testimonials .testimonials-header {
+  color: #D30909;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 20px;
+}
+.testimonials-section .testimonials .testimonials-subtitle {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.testimonials-section .testimonials .review-cards {
+  padding-top: 60px;
+}
+
+.contact {
+  background-color: #D30909;
+  display: flex;
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  grid-template-columns: fit-content(300px) fit-content(1000px);
+}
+.contact .contact-info {
+  grid-template-rows: fit-content(300px) fit-content(1000px);
+}
+.contact .contact-header {
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 3.5px;
+  text-align: right;
+}
+.contact .contact-text {
+  color: white;
+}
+.contact .contact-text ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.contact .contact-text li {
+  padding-left: 40px;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.1px;
+}
+.contact .contact-text li.contact-email {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: normal;
+  letter-spacing: 1.1px;
+  position: relative;
+}
+.contact .contact-text li.contact-email:before {
+  content: "";
+  display: inline-block;
+  width: 30px; /* Adjust size */
+  height: 30px; /* Adjust size */
+  background-image: url("/assets/white-email-icon.svg"); /* Path to your SVG file */
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.contact .contact-text li.contact-location {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.1px;
+  position: relative;
+}
+.contact .contact-text li.contact-location:before {
+  content: "";
+  display: inline-block;
+  width: 30px; /* Adjust size */
+  height: 30px; /* Adjust size */
+  background-image: url("/assets/location-icon.svg"); /* Path to your SVG file */
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.contact .contact-text li.contact-phone {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.1px;
+}
+.contact .contact-text li.contact-phone:before {
+  content: "";
+  display: inline-block;
+  width: 30px; /* Adjust size */
+  height: 30px; /* Adjust size */
+  background-image: url("/assets/white-phone-icon.svg"); /* Path to your SVG file */
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.contact .free-estimate-box {
+  display: flex;
+  flex-direction: column;
+  width: 534.742px;
+  height: 421.057px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #830909;
+  box-shadow: 0px 4px 6.2px 2px rgba(0, 0, 0, 0.3);
+}
+.contact .free-estimate-box .estimate-title {
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.1px;
+  text-align: center;
+}
+.contact .free-estimate-box .small-info {
+  display: grid;
+  grid-template-columns: 230px 230px;
+  grid-template-rows: 80px 80px;
+}
+.contact .free-estimate-box .small-info input {
+  width: 206.318px;
+  height: 40.421px;
+  flex-shrink: 0;
+}
+.contact .free-estimate-box #input {
+  border-radius: 10px;
+  background: #AC0B0B;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  display: inline-block;
+}
+.contact .free-estimate-box img {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+.contact .free-estimate-box .message {
+  width: 464.004px;
+  height: 138.949px;
+  flex-shrink: 0;
+  resize: none;
+}
+.contact .free-estimate-box textarea:focus, .contact .free-estimate-box input:focus {
+  outline: none;
+}
+.contact .free-estimate-box ::-moz-placeholder {
+  color: #D34F4F;
+  font-family: "Outfit";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.contact .free-estimate-box ::placeholder {
+  color: #D34F4F;
+  font-family: "Outfit";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+footer {
+  display: flex;
+  background-color: #D30909;
+}
+footer small {
+  color: #FFF;
+  font-family: "EB Garamond";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.5px;
+}
+footer div {
+  display: grid;
+}/*# sourceMappingURL=styles.css.map */

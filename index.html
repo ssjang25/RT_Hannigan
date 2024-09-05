@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.T. Hannigan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html"><img class="logo" id="logo" src="./assets/lightbulb.svg"/></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><button id="navbar-button" href="#contact">Request Free Estimate</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="home-section">
+            <div class="home" id="home">
+                <img class="home-logo" id="home-grid-item" src="./assets/lightbulb.svg"/>
+                <div class="home-text" id="home-grid-item">
+                    <h1 id="home-title">R.T. Hannigan</h1>
+                    <h2 id="home-subtitle-1">Electrical & Remodeling</h2>
+                    <h3 id="home-subtitle-2">Residential <font color="#D30909">•</font> Commercial</h3>
+                    <a href="#contact" id="estimate-button">Request Free Estimate</a>
+                </div>
+            </div>
+        </section>
+        <section class="about-section">
+            <div class="about" id="about">
+                <div class="about-text">
+                    <span class="about-header">Our Background</span>
+                    <span id="about-subtitle"><font color="#D30909">15 Years </font>of Service in <font color="#D30909">Metrowest</font> and <font color="#D30909">Central MA</font></span>
+                    <span id="about-desc">Our team of electricians have over 10 years of experience in the industry. We have worked on and offer a wide range of electrical services, from small residential repairs to large commercial installations. No matter the project, we prioritize safety in all of our work. Our team is fully licensed and insured, and we follow all safety guidelines and regulations to ensure the safety of our clients and their properties.</span>
+                    <ul class="about-list">
+                        <li>Fully licensed and insured</li>
+                        <li>Extensive background in electrical and remodeling work</li>
+                    </ul>
+                    <button id="about-button">About Us</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <div class="services" id="services">
+                <div class="services-header">Our Services</div>
+                <div class="services-subtitle">From electrical design, lighting layouts, to the finish work</div>
+                <div class="services-cards">
+                    <img class="ev-service-card" id="services-grid-item" src="./assets/ev-service-card.svg"/>
+                    <img class="generator-service-card" id="services-grid-item" src="./assets/generator-service-card.svg"/>
+                    <img class="internet-service-card" id="services-grid-item" src="./assets/internet-service-card.svg"/>
+                    <img class="lighting-service-card" id="services-grid-item" src="/assets/lighting-service-card.svg"/>
+                </div>
+                <button class="services-button">Our Services</button>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="gallery" id="gallery">
+                <div class="gallery-header">See Our Work</div>
+                <div class="gallery-subtitle">Our Portfolio</div>
+                <div class="gallery-images">
+                    <img class="image-1" src="/assets/gallery-1.svg"/>
+                    <img class="image-2" src="/assets/gallery-2.svg"/>
+                    <img class="image-3" src="/assets/gallery-3.svg"/>
+                </div>
+                <button class="gallery-button">View Portfolio</button>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <div class="testimonials" id="testimonials">
+                <div class="testimonials-header">What People Say</div>
+                <div class="testimonials-subtitle">Our Testimonials</div>
+                <div class="review-cards">
+                    <img class="review-card-1" id="testimonials" src="/assets/review-card-1.svg"/>
+                    <img class="review-card-2" id="testimonials" src="/assets/review-card-2.svg"/>
+                    <img class="review-card-3" id="testimonials" src="/assets/review-card-3.svg"/>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact" id="contact">
+                <div class="contact-info">
+                    <div class="contact-header">Get In Touch</div>
+                    <div class="contact-text">
+                        <ul>
+                            <li class="contact-email">E-mail</li>
+                            <li class="list-detail">rthannigan@gmail.com</li>
+                            <li class="contact-location">Location</li>
+                            <li class="list-detail">Westborough, MA</li>
+                            <li class="contact-phone">Phone</li>
+                            <li class="list-detail">508-259-1296</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="free-estimate-box">
+                    <span class="estimate-title">Get A Free Estimate</span>
+                    <form class="estimate-form">
+                        <div class="small-info">
+                            <input type="text" id= "input" class="name" placeholder="Name">
+                            <input type="text" id= "input" class="service-type" placeholder="Service Type">
+                            <input type="text" id= "input" class="phone" placeholder="Phone">
+                            <input type="email" id="input" class="email" placeholder="E-mail">
+                        </div>
+                        <textarea rows="5" cols="33" id="input" class="message" placeholder="Message"></textarea>
+                        <submit></submit>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <small class="license-1">MA Elec #23505A</small>
+        <div>
+            <img src="/assets/white-light-bulb.svg">
+            <small>R.T. Hannigan Corp.</small>
+        </div>
+        <small class="license-2">CSL#102230</small>
+    </footer>
+</body>
+</html>
