@@ -1,4 +1,5 @@
-$main-red : #D30909;
+$main-red : #CD3200;
+
 
 *{
     margin: auto;
@@ -8,9 +9,42 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+    font-family: "Roboto", sans-serif;
+    padding: 1.4em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    color: #fff;
+    background-color: $main-red;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover{
+    transform: translateY(-7px);
+}
+button:active{
+    transform: translateY(-1px);
+}
+
+
+
 nav{
+    width: 120%;
+    position: fixed;
     display: flex;
-    padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
     color: #000;
@@ -19,16 +53,27 @@ nav{
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    background-color: rgba(255, 255, 255, 0.682);
+    padding-top: 1%;
+    padding-bottom:1%;
+
+    .navbar-logo {
+        margin: 0 !important;
+    }
+
 
     img {
-        width: 100px;
+        width: 20%;
+        padding-left: 15%;
     }
 
     .nav-links{
-        flex: 1;
+        display:grid;
         text-align: right;
+        width: 105%;
     
         ul {
+            padding-inline-start: 0%;
             li{
                 list-style: none;
                 display: inline-block;
@@ -44,37 +89,20 @@ nav{
                 margin: auto;
                 transition: 0.5s;
             }
-            li:hover::after{
-                width: 100%;
-            }
             a {
                 color: black;
                 text-decoration: none;
                 font-size: 20px;
             }
-            a:hover{
-                color: $main-red;
-            }
-        }
-        #navbar-button{
-            text-decoration: none;
-            padding: 12px 34px;
-            font-size: 7px;
-            position: relative;
-            font-family: "Roboto", sans-serif;
-            background: $main-red;
-            border-radius: 4px;
-            color: white;
-            font-size: 18px;
-            font-weight: 400;
-            line-height:37px;
-            cursor: pointer;
         }
     }
 }
 
 .home-section {
-    padding: 150px;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
     justify-content: center;
 
     .home{
@@ -91,13 +119,13 @@ nav{
 
     .home-text{
         display: grid;
-        
     }
 
-    #home-title{
+    .home-title{
+        display: grid;
         color: #000;
         font-family: "EB Garamond";
-        font-size: 85px;
+        font-size: 6.5rem;
         font-style: normal;
         font-weight: 800;
         line-height: normal;
@@ -125,48 +153,22 @@ nav{
     }
 }
 
-#estimate-button{
-    display: inline-block;
-    text-decoration: none;
-    padding: 12px 34px;
-    font-size: 13px;
-    position: relative;
-    font-family: "Roboto", sans-serif;
-    background: $main-red;
-    border-radius: 4px;
-    color: white;
-    font-size: 18px;
-    font-weight: 400;
-    line-height:37px;
-    cursor: pointer;
-
-    // color: #FFF;
-    // text-align: center;
-    // font-family: "Roboto", sans-serif;
-    // font-size: 18px;
-    // font-style: normal;
-    // font-weight: 400;
-    // line-height: 37px; 
-    // border: none;
-    // background: $main-red;
-    // border-radius: 4px;
-    // padding: 5px;
-}
-
 .about-section {
-    padding-top: 150px;
-    padding-bottom: 150px;
-    background-image: url('/assets/kitchen_1.jpg');
-    background-repeat: no-repeat;
-    background-position: right center;
-    
+    padding-top: 10%;
+    padding-bottom: 15%;
+
+    img {
+        width: 50%;
+        margin: 0;
+    }
 
     .about {
         display: flex;
+        width: 100%;
+
         .about-text{
-            flex-shrink: 0;
-            margin-left: 200px;
-            width: 500px;
+            display: flex;
+            width: 65%;
             display: grid;
             justify-content: center;
         }
@@ -192,6 +194,7 @@ nav{
         }
     
         #about-desc{
+            padding-top: 5%;
             color: #000;
             text-align: center;
             font-family: "Roboto", sans-serif;
@@ -200,37 +203,55 @@ nav{
             font-weight: 400;
             line-height: 28px; /* 175% */
         }
-    
-        #about-button{
-            color: #FFF;
-            text-align: center;
-            font-family: "Roboto", sans-serif;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 37px; 
-            border: none;
-            background: $main-red;
-            border-radius: 4px;
-            padding: 5px;
-        }
-    
-        ul{
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li{
-            background: url("/assets/yellow-check.svg") no-repeat left center;
-            background-size: 16px 16px;
+
+        .about-li{
+            width: 60%;
             
+            .about-list{
+                list-style-type: none;
+                padding-left: 0;
+                padding-top: 10%;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: -0.2px;
+                
+            }
+            li.detail {
+                padding-left: 10%;
+                font-family: "Red Hat Display", sans-serif;
+                font-size: 20px !important;
+                font-style: normal;
+                font-weight: 700 !important;
+                line-height: normal;
+                letter-spacing: 1.1px;
+                position: relative;
+                padding-bottom: 10%;
+        
+                &:before{
+                    content: "";
+                    display: inline-block;
+                    width: 30px; /* Adjust size */
+                    height: 30px; /* Adjust size */
+                    background-image: url('assets/yellow-check.svg'); /* Path to your SVG file */
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    padding-bottom: 10%;
+                }
+            }
         }
     }
 
 }
 
 .services-section{
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 10%;
+    padding-bottom: 10%;
 
     .services{
         display: grid;
@@ -258,33 +279,18 @@ nav{
         .services-cards{
             padding-bottom: 50px;
         }
-        .services-button{
-            color: #FFF;
-            text-align: center;
-            font-family: "Roboto", sans-serif;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 37px; 
-            border: none;
-            background: $main-red;
-            border-radius: 4px;
-            padding: 20px 20px 20px;
-        }
     }
 }
 
 .gallery-section{
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 10%;
+    padding-bottom: 10%;
 
     .gallery{
         display: grid;
         grid-template-rows: fit-content(300px) fit-content(1000px);
         justify-content: center;
         margin: auto;
-        padding-top: 100px;
-        padding-bottom: 100px;
         justify-content: center;
         background-image: url("/assets/slanted-rectangle.svg");
         background-size: cover;
@@ -319,25 +325,12 @@ nav{
             }
             
         }
-        .gallery-button{
-            color: #FFF;
-            text-align: center;
-            font-family: "Roboto", sans-serif;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 37px; 
-            border: none;
-            background: $main-red;
-            border-radius: 4px;
-            padding: 5px;
-        }
     }
 }
 
 .testimonials-section{
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 10%;
+    padding-bottom: 20%;
 
     .testimonials{
         justify-content: center;
@@ -363,7 +356,7 @@ nav{
             line-height: normal;
         }
         .review-cards{
-            padding-top: 60px;
+            padding-top: 5%;
         }
     }
 }
@@ -373,8 +366,8 @@ nav{
     background-color: $main-red;
     display: flex;
     margin: auto;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 5%;
+    padding-bottom: 20%;
     grid-template-columns: fit-content(300px) fit-content(1000px);
 
     .contact-info{
@@ -390,6 +383,7 @@ nav{
         line-height: normal;
         letter-spacing: 3.5px;
         text-align: right;
+        padding-bottom: 6%;
     }
 
     .contact-text{
@@ -477,9 +471,67 @@ nav{
                 transform: translateY(-50%);
             }
         }
+        li.list-detail{
+            padding-bottom: 6%;
+        }
+    }
+
+    #input {
+        color:white;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight:500;
+        font-size: 18px;
+        border-radius: 5px;
+        line-height: 22px;
+        background-color: transparent;
+        border:2px solid #CC6666;
+        transition: all 0.3s;
+        padding: 13px;
+        margin-bottom: 15px;
+        width:100%;
+        box-sizing: border-box;
+        outline:0;
     }
     
     .free-estimate-box{
+        .feedback-input {
+            color:white;
+            background-color: transparent;
+            font-weight:500;
+            font-size: 18px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            padding: 13px;
+            margin-bottom: 15px;
+            width:100%;
+            box-sizing: border-box;
+            outline:0;
+        }
+          
+        .feedback-input:focus { border:2px solid #CC4949; }
+          
+        textarea {
+            height: 150px;
+            line-height: 150%;
+            resize:vertical;
+        }
+          
+        [type="submit"] {
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+            width: 100%;
+            background:#CC6666;
+            border-radius:5px;
+            border:0;
+            cursor:pointer;
+            color:white;
+            font-size:24px;
+            padding-top: 5%;
+            padding-bottom:10px;
+            transition: all 0.3s;
+            margin-top:-4px;
+            font-weight:700;
+        }
+        [type="submit"]:hover { background:#CC4949; }
         display: flex;
         flex-direction: column;
         width: 534.742px;
@@ -487,7 +539,6 @@ nav{
         flex-shrink: 0;
         border-radius: 20px;
         background: #830909;
-        box-shadow: 0px 4px 6.2px 2px rgba(0, 0, 0, 0.30);
 
         .estimate-title{
             color: #FFF;
@@ -500,29 +551,14 @@ nav{
             text-align: center;
         }
 
-        .estimate-form{
-            
-        }
 
-        .small-info{
-            display: grid;
-            grid-template-columns: 230px 230px;
-            grid-template-rows: 80px 80px;
-
-            input {
-                width: 206.318px;
-                height: 40.421px;
-                flex-shrink: 0;
-            }
-        }
-
-        #input {
-            border-radius: 10px;
-            background: #AC0B0B;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            border: none;
-            display: inline-block;
-        }
+        // .feedback-input {
+        //     border-radius: 10px;
+        //     background: #AC0B0B;
+        //     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        //     border: none;
+        //     display: inline-block;
+        // }
         
         img {
             position: absolute;
@@ -556,18 +592,50 @@ nav{
 }
 
 footer{
-    display: flex;
+    display: grid;
     background-color: $main-red;
-    small{
-        color: #FFF;
+
+    div{
+        display: flex;
+        padding-bottom: 2%;
+    }
+
+    p {
+        color:#FFF;
         font-family: "EB Garamond";
-        font-size: 30px;
+        font-size: 1.5em;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
         letter-spacing: 1.5px;
     }
-    div{
-        display: grid;
+    
+    // .license1{
+    //     padding-left: 10%;
+    // }
+
+    // .license2 {
+    //     padding-right: 10%;
+    // }
+
+    // small{
+    //     color: #FFF;
+    //     font-family: "EB Garamond";
+    //     font-size: 1.5em;
+    //     font-style: normal;
+    //     font-weight: 700;
+    //     line-height: normal;
+    //     letter-spacing: 1.5px;
+    //     margin: 0;
+    //     text-align: center;
+    // }
+
+    // div{
+    //     display: grid;
+    //     padding-bottom: 2%;
+    // }
+
+    img {
+        width: 5%;
     }
 }

@@ -6,9 +6,41 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* From Uiverse.io by cssbuttons-io */
+button {
+  font-family: "Roboto", sans-serif;
+  padding: 1.4em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #CD3200;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  transform: translateY(-7px);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
 nav {
+  width: 120%;
+  position: fixed;
   display: flex;
-  padding: 2% 6%;
   justify-content: space-between;
   align-items: center;
   color: #000;
@@ -17,13 +49,24 @@ nav {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  background-color: rgba(255, 255, 255, 0.682);
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+nav .navbar-logo {
+  margin: 0 !important;
 }
 nav img {
-  width: 100px;
+  width: 20%;
+  padding-left: 15%;
 }
 nav .nav-links {
-  flex: 1;
+  display: grid;
   text-align: right;
+  width: 105%;
+}
+nav .nav-links ul {
+  padding-inline-start: 0%;
 }
 nav .nav-links ul li {
   list-style: none;
@@ -35,39 +78,22 @@ nav .nav-links ul li::after {
   content: "";
   width: 0%;
   height: 2px;
-  background: #D30909;
+  background: #CD3200;
   display: block;
   margin: auto;
   transition: 0.5s;
-}
-nav .nav-links ul li:hover::after {
-  width: 100%;
 }
 nav .nav-links ul a {
   color: black;
   text-decoration: none;
   font-size: 20px;
 }
-nav .nav-links ul a:hover {
-  color: #D30909;
-}
-nav .nav-links #navbar-button {
-  text-decoration: none;
-  padding: 12px 34px;
-  font-size: 7px;
-  position: relative;
-  font-family: "Roboto", sans-serif;
-  background: #D30909;
-  border-radius: 4px;
-  color: white;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 37px;
-  cursor: pointer;
-}
 
 .home-section {
-  padding: 150px;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
   justify-content: center;
 }
 .home-section .home {
@@ -82,10 +108,11 @@ nav .nav-links #navbar-button {
 .home-section .home-text {
   display: grid;
 }
-.home-section #home-title {
+.home-section .home-title {
+  display: grid;
   color: #000;
   font-family: "EB Garamond";
-  font-size: 85px;
+  font-size: 6.5rem;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
@@ -110,41 +137,26 @@ nav .nav-links #navbar-button {
   padding-bottom: 30px;
 }
 
-#estimate-button {
-  display: inline-block;
-  text-decoration: none;
-  padding: 12px 34px;
-  font-size: 13px;
-  position: relative;
-  font-family: "Roboto", sans-serif;
-  background: #D30909;
-  border-radius: 4px;
-  color: white;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 37px;
-  cursor: pointer;
-}
-
 .about-section {
-  padding-top: 150px;
-  padding-bottom: 150px;
-  background-image: url("/assets/kitchen_1.jpg");
-  background-repeat: no-repeat;
-  background-position: right center;
+  padding-top: 10%;
+  padding-bottom: 15%;
+}
+.about-section img {
+  width: 50%;
+  margin: 0;
 }
 .about-section .about {
   display: flex;
+  width: 100%;
 }
 .about-section .about .about-text {
-  flex-shrink: 0;
-  margin-left: 200px;
-  width: 500px;
+  display: flex;
+  width: 65%;
   display: grid;
   justify-content: center;
 }
 .about-section .about .about-header {
-  color: #D30909;
+  color: #CD3200;
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -162,6 +174,7 @@ nav .nav-links #navbar-button {
   line-height: normal;
 }
 .about-section .about #about-desc {
+  padding-top: 5%;
   color: #000;
   text-align: center;
   font-family: "Roboto", sans-serif;
@@ -170,38 +183,55 @@ nav .nav-links #navbar-button {
   font-weight: 400;
   line-height: 28px; /* 175% */
 }
-.about-section .about #about-button {
-  color: #FFF;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 37px;
-  border: none;
-  background: #D30909;
-  border-radius: 4px;
-  padding: 5px;
+.about-section .about .about-li {
+  width: 60%;
 }
-.about-section .about ul {
+.about-section .about .about-li .about-list {
   list-style-type: none;
   padding-left: 0;
+  padding-top: 10%;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.2px;
 }
-.about-section .about li {
-  background: url("/assets/yellow-check.svg") no-repeat left center;
-  background-size: 16px 16px;
+.about-section .about .about-li li.detail {
+  padding-left: 10%;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 20px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: normal;
+  letter-spacing: 1.1px;
+  position: relative;
+  padding-bottom: 10%;
+}
+.about-section .about .about-li li.detail:before {
+  content: "";
+  display: inline-block;
+  width: 30px; /* Adjust size */
+  height: 30px; /* Adjust size */
+  background-image: url("assets/yellow-check.svg"); /* Path to your SVG file */
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-bottom: 10%;
 }
 
 .services-section {
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 .services-section .services {
   display: grid;
   justify-content: center;
 }
 .services-section .services .services-header {
-  color: #D30909;
+  color: #CD3200;
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -222,31 +252,16 @@ nav .nav-links #navbar-button {
 .services-section .services .services-cards {
   padding-bottom: 50px;
 }
-.services-section .services .services-button {
-  color: #FFF;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 37px;
-  border: none;
-  background: #D30909;
-  border-radius: 4px;
-  padding: 20px 20px 20px;
-}
 
 .gallery-section {
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 .gallery-section .gallery {
   display: grid;
   grid-template-rows: fit-content(300px) fit-content(1000px);
   justify-content: center;
   margin: auto;
-  padding-top: 100px;
-  padding-bottom: 100px;
   justify-content: center;
   background-image: url("/assets/slanted-rectangle.svg");
   background-size: cover;
@@ -254,7 +269,7 @@ nav .nav-links #navbar-button {
   height: 200vh; /* Full viewport height */
 }
 .gallery-section .gallery .gallery-header {
-  color: #D30909;
+  color: #CD3200;
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -279,23 +294,10 @@ nav .nav-links #navbar-button {
   margin: 20px;
   border-radius: 20px;
 }
-.gallery-section .gallery .gallery-button {
-  color: #FFF;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 37px;
-  border: none;
-  background: #D30909;
-  border-radius: 4px;
-  padding: 5px;
-}
 
 .testimonials-section {
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 10%;
+  padding-bottom: 20%;
 }
 .testimonials-section .testimonials {
   justify-content: center;
@@ -303,7 +305,7 @@ nav .nav-links #navbar-button {
   display: grid;
 }
 .testimonials-section .testimonials .testimonials-header {
-  color: #D30909;
+  color: #CD3200;
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -321,15 +323,15 @@ nav .nav-links #navbar-button {
   line-height: normal;
 }
 .testimonials-section .testimonials .review-cards {
-  padding-top: 60px;
+  padding-top: 5%;
 }
 
 .contact {
-  background-color: #D30909;
+  background-color: #CD3200;
   display: flex;
   margin: auto;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 5%;
+  padding-bottom: 20%;
   grid-template-columns: fit-content(300px) fit-content(1000px);
 }
 .contact .contact-info {
@@ -344,6 +346,7 @@ nav .nav-links #navbar-button {
   line-height: normal;
   letter-spacing: 3.5px;
   text-align: right;
+  padding-bottom: 6%;
 }
 .contact .contact-text {
   color: white;
@@ -427,6 +430,25 @@ nav .nav-links #navbar-button {
   top: 50%;
   transform: translateY(-50%);
 }
+.contact .contact-text li.list-detail {
+  padding-bottom: 6%;
+}
+.contact #input {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #CC6666;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
 .contact .free-estimate-box {
   display: flex;
   flex-direction: column;
@@ -435,7 +457,45 @@ nav .nav-links #navbar-button {
   flex-shrink: 0;
   border-radius: 20px;
   background: #830909;
-  box-shadow: 0px 4px 6.2px 2px rgba(0, 0, 0, 0.3);
+}
+.contact .free-estimate-box .feedback-input {
+  color: white;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+.contact .free-estimate-box .feedback-input:focus {
+  border: 2px solid #CC4949;
+}
+.contact .free-estimate-box textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+.contact .free-estimate-box [type=submit] {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  width: 100%;
+  background: #CC6666;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 5%;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+.contact .free-estimate-box [type=submit]:hover {
+  background: #CC4949;
 }
 .contact .free-estimate-box .estimate-title {
   color: #FFF;
@@ -446,23 +506,6 @@ nav .nav-links #navbar-button {
   line-height: normal;
   letter-spacing: 1.1px;
   text-align: center;
-}
-.contact .free-estimate-box .small-info {
-  display: grid;
-  grid-template-columns: 230px 230px;
-  grid-template-rows: 80px 80px;
-}
-.contact .free-estimate-box .small-info input {
-  width: 206.318px;
-  height: 40.421px;
-  flex-shrink: 0;
-}
-.contact .free-estimate-box #input {
-  border-radius: 10px;
-  background: #AC0B0B;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  border: none;
-  display: inline-block;
 }
 .contact .free-estimate-box img {
   position: absolute;
@@ -500,18 +543,22 @@ nav .nav-links #navbar-button {
 }
 
 footer {
-  display: flex;
-  background-color: #D30909;
+  display: grid;
+  background-color: #CD3200;
 }
-footer small {
+footer div {
+  display: flex;
+  padding-bottom: 2%;
+}
+footer p {
   color: #FFF;
   font-family: "EB Garamond";
-  font-size: 30px;
+  font-size: 1.5em;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1.5px;
 }
-footer div {
-  display: grid;
+footer img {
+  width: 5%;
 }/*# sourceMappingURL=styles.css.map */
